@@ -20,7 +20,7 @@ $users = Get-ADUser -Filter * | select SamAccountName
 
 foreach ($user in $users){
 
-foreach($line in [System.IO.File]::ReadLines("Q:\Users\e_kacmaz\Desktop\RockYou.txt")){
+foreach($line in [System.IO.File]::ReadLines("c:\desktop\RockYou.txt")){
 
 if($(Test-ADAuthentication -username $user.SamAccountName -password $line.ToString()) -eq "True"){
 
